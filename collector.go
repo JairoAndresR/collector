@@ -30,7 +30,8 @@ func (c *collector) GetContent(url string) (string, error) {
 	response, err := c.client.Do(request)
 
 	if c.isError(response, err) {
-		return "", errors.New(requestExecutionFailed)
+		return "", err
+		// return "", errors.New(requestExecutionFailed)
 	}
 
 	defer response.Body.Close()
