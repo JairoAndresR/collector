@@ -1,6 +1,7 @@
 package collector
 
 import (
+	"crypto/tls"
 	"errors"
 	"golang.org/x/text/encoding/charmap"
 	"io/ioutil"
@@ -16,7 +17,10 @@ type collector struct {
 }
 
 func NewCollector() Collector {
-	c := &http.Client{}
+	tr := &http.Transport{
+		TLSClientConfig: &tls.Config{InsecureSkipVerify : true},
+	}
+	c := &http.Client{Transport: tr}
 	return &collector{client: c}
 }
 
