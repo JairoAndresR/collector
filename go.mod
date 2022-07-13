@@ -1,4 +1,4 @@
-module github.com/udistritali3plus/collector
+module github.com/JairoAndresR/collector
 
 go 1.14
 

@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/udistritali3plus/collector"
+	"github.com/JairoAndresr/collector"
 )
 
 const (

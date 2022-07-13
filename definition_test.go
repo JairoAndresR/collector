@@ -2,7 +2,7 @@ package collector
 
 import (
 	"github.com/stretchr/testify/assert"
-	"github.com/udistritali3plus/collector/fixtures"
+	"github.com/JairoAndresR/collector/fixtures"
 	"testing"
 )
 
