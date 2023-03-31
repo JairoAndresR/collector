@@ -35,4 +35,4 @@ fields:
     ex: (DOI:</strong>).*(\s{2,} <br/>) #No elimina salto de linea ni etiqueta br
   -
     name: autores
-    ex: (Autores:).*, 
+    ex: (Autores:).*,? 
