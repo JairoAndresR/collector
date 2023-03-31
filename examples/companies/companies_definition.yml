@@ -1,5 +1,5 @@
 name: Empresas de base tecnológica
-path: "/html[1]/body[1]/table[46]/tbody[1]/tr"
+path: "/html[1]/body[1]/table[50]/tbody[1]/tr"
 
 parser:
   lookahead-manual: true
@@ -21,4 +21,4 @@ fields:
     ex: (<br/> )(\012).* #Problem
   -
     name: authors
-    ex: (Autores:)(.*)(,)
+    ex: (Autores:)(.*)(,*)
