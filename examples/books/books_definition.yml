@@ -8,13 +8,13 @@ fields:
     ex: (<strong>).*(</strong>)
   -
     name: title
-    ex: (</strong>).*(<br/>)
+    ex: "(> : ).*(<br/>)"
 
   - name: isbn
-    ex: (ISBN:).*(vol)
+    ex: (ISBN:).*(,)
   -
     name: published_country
-    ex: (<br/>\s+).*(,[0-9]+, ISBN) #Funciona parcialmente, no elimina extremos de validacion de cadena, <br/> y despues de ,
+    ex: (\s*)[a-zA-ZñÑáéíóúÁÉÍÓÚ]*(,)
   -
     name: published_year
     ex: \d{4}
@@ -29,4 +29,4 @@ fields:
     ex: (Ed.)(.*)\s+(<br/>)
   -
     name: autores
-    ex: (Autores:)(.*),
+    ex: (Autores:).*,?
