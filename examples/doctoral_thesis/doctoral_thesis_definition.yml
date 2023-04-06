@@ -1,5 +1,5 @@
 name: Tesis de doctorado
-path: "/html[1]/body[1]/table[66]/tbody[1]/tr"
+path: "/html[1]/body[1]/table[80]/tbody[1]/tr"
 parser:
   lookahead-manual: true
 fields:
@@ -8,19 +8,19 @@ fields:
     ex: (<strong>).*(</strong>)
   -
     name: title
-    ex: (</strong>).*(<br/>)
+    ex: "(> : ).*(<br/>)"
 
   - name: fecha_inicio
     ex: (Desde)(.*)(hasta)
   -
     name: tipo_orientacion
-    ex: (orientación:)(.*)(<br>)
+    ex: (orientación:).*(<)
   -
     name: nombre_estudiante
-    ex: (estudiante:)(.*)(Programa académico:)
+    ex: (:\s*).*(,)
   -
     name: programa_academico
-    ex: (Programa académico:)(.*)(<br>)
+    ex: (Programa académico:).*(<)
   -
     name: numero_paginas
     ex: (Número de páginas:)(.*)(, Valoración:)
